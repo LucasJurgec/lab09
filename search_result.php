@@ -9,7 +9,7 @@
     $dbconn = @mysqli_connect($host,$user,$pwd,$sql_db);
 
     if (isset($_GET['model'])) {
-        $model = mysqli_real_escape_string($conn, $_GET['model']);
+        $model = mysqli_real_escape_string($dbconn, $_GET['model']);
         $sql = "SELECT * FROM cars WHERE model LIKE '%$model%'";
         $result = mysqli_query($conn, $sql);
 
@@ -33,7 +33,7 @@
         echo "Please enter a model to search.";
     }
 
-    mysqli_close($conn);
+    mysqli_close($dbconn);
     ?>
 </body>
 </html>
