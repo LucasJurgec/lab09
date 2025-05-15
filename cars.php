@@ -42,15 +42,18 @@
 
                 echo "</table>";
 
+            }
+
             else {
                 echo "<p>Unable to select from database.</p>";
             }
-            }
+            
             mysqli_close($dbconn);
+        }
         else {
             echo "<p>Unable to connect to the database.</p>";
         }
-        }
+        
     ?>
 </body>
 </html>
