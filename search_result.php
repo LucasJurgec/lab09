@@ -11,7 +11,7 @@
     if (isset($_GET['model'])) {
         $model = mysqli_real_escape_string($dbconn, $_GET['model']);
         $sql = "SELECT * FROM cars WHERE model LIKE '%$model%'";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($dbconn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             echo "<table border='1' cellpadding='5'>";
